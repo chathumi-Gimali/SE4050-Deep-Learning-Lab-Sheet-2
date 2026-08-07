@@ -1,5 +1,5 @@
 # SE4050-Deep-Learning-Lab-Sheet-2
-# SE4050 - Deep Learning - Lab 2
+
 
 ## Lab 2: Introduction to Backpropagation and Feed-Forward Neural Networks
 
@@ -22,8 +22,9 @@ The default notebook trains a simple 2-2-2 feed-forward network (2 inputs, 2 hid
 | 1000 | [0.0447, 0.9569] | [0.01, 0.99] | 0.00115 |
 | 10000 | [0.0162, 0.9839] | [0.01, 0.99] | 0.0000379 |
 
-![Backprop output](C:\Users\HP\OneDrive\Pictures\100.png)
-
+: ![Backprop output](images/100.png)
+: ![Backprop output](images/1000.png)
+: ![Backprop output](images/10000.png)
 
 **Observation**
 

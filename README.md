@@ -22,13 +22,13 @@ The default notebook trains a simple 2-2-2 feed-forward network (2 inputs, 2 hid
 | 1000 | [0.0447, 0.9569] | [0.01, 0.99] | 0.00115 |
 | 10000 | [0.0162, 0.9839] | [0.01, 0.99] | 0.0000379 |
 
-**At 100 iterations**
+###At 100 iterations
 ![Backprop output](100.png)
 
-**At 1000 iterations**
+###At 1000 iterations
 ![Backprop output](1000.png)
 
-**At 10000 iterations**
+###At 10000 iterations
 ![Backprop output](10000.png)
 
 **Observation**

@@ -22,7 +22,9 @@ The default notebook trains a simple 2-2-2 feed-forward network (2 inputs, 2 hid
 | 1000 | [0.0447, 0.9569] | [0.01, 0.99] | 0.00115 |
 | 10000 | [0.0162, 0.9839] | [0.01, 0.99] | 0.0000379 |
 
-![Backprop output](images/100.png)
+![Backprop output](C:\Users\HP\OneDrive\Pictures\100.png)
+
+
 **Observation**
 
 Increasing the number of iterations significantly improved the network's prediction accuracy. At 100 iterations, the error was 0.0205 with output [0.178, 0.8771]. Increasing to 1000 iterations reduced the error to 0.00115, and at 10000 iterations the error dropped further to 0.0000379, with the output [0.0162, 0.9839] nearly matching the desired output [0.01, 0.99]. This confirms that each backpropagation iteration adjusts the weights slightly in the direction that reduces error, so more iterations allow the network to converge closer to the optimal weights.

@@ -77,7 +77,31 @@ With only 1–2 hidden units, the network does not have enough capacity to model
 
 ## Exercise 3: MLP_with_MNIST_dataset.ipynb
 
-*(to be added)*
+**Objective**
+Train an MLP on the MNIST handwritten digit dataset, improve test accuracy via hyperparameter tuning, add L1/L2 regularization, and visualize class-wise performance with a confusion matrix.
+
+**Model architecture**
+
+A 4-layer feed-forward network: `Flatten → Dense(64, relu) → Dense(64, relu) → Dense(32, relu) → Dense(10, softmax)`, trained with the Adam optimizer and categorical crossentropy loss for 10 epochs.
+
+**Results**
+
+| | Baseline | With L1/L2 Regularization |
+|---|:---:|:---:|
+| Training accuracy | 98.94% | 98.47% |
+| **Test accuracy** | **97.63%** | **97.55%** |
+| Test loss | 0.0969 | 0.1375 |
+| Train–test accuracy gap | 1.31% | 0.92% |
+
+**Observation**
+
+Adding L1/L2 regularization (`l1=1e-5, l2=1e-4`) to the Dense layers didn't meaningfully change raw test accuracy — it stayed essentially the same (97.63% → 97.55%). However, the gap between training and test accuracy shrank from 1.31% to 0.92%, showing regularization did its intended job of slightly reducing overfitting, even though this model wasn't overfitting by much to begin with since MNIST is a relatively easy dataset for this architecture.
+
+**Confusion Matrix**
+
+<p align="center"><img src="confusion_matrix.png" width="500"></p>
+
+The confusion matrix shows the model correctly classifies the vast majority of digits in each class, with prediction counts concentrated heavily along the diagonal. Misclassifications are sparse and scattered, typically between visually similar digits.
 
 ---
 
@@ -91,4 +115,5 @@ With only 1–2 hidden units, the network does not have enough capacity to model
 | `NN_sample.ipynb` | Modified notebook for Exercise 2 (includes hidden layer size comparison) |
 | `planar_utils.py`, `testCases.py` | Helper files required by NN_sample.ipynb |
 | `ex2_answers.txt` | Written answers to Exercise 2 questions |
-| `MLP_with_MNIST_dataset.ipynb` | Modified notebook for Exercise 3 |
+| `MLP_with_MNIST_dataset.ipynb` | Modified notebook for Exercise 3 (tuned hyperparameters, L1/L2 regularization, confusion matrix) |
+| `confusion_matrix.png` | Confusion matrix screenshot from Exercise 3 |

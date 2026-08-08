@@ -44,36 +44,34 @@ Increasing the number of iterations significantly improved the network's predict
 
 ## Exercise 2: NN_sample.ipynb
 
-Exercise 2: NN_sample.ipynb - Tuning Hidden Layer Size
+**Objective**
+Understand a feed-forward network trained on a 2D "flower" dataset, then observe how accuracy changes as the hidden layer size increases.
 
-Results:
-Hidden Units | Accuracy
-1            | 67.5%
-2            | 67.25%
-3            | 90.75%
-4            | 90.5%
-5            | 91.25%
-20           | 90.0%
-50           | 90.75%
+**What was done**
 
-Question 1: What happens when the number of hidden nodes increase?
+The baseline model (default hidden layer size) achieved 90% accuracy. A text cell and code cell were then added to loop through 7 different hidden layer sizes `[1, 2, 3, 4, 5, 20, 50]`, training a fresh model at each size and printing its accuracy.
 
-Accuracy jumps sharply from 1-2 hidden units (around 67%) to 3+ hidden units
-(around 90%), then stays roughly flat between 90-91% all the way from 3 up
-to 50 hidden units. It does not keep increasing indefinitely as hidden
-units are added.
+**Results**
 
-Question 2: Can you explain the pattern of the accuracy when the hidden
-nodes increase?
+| Hidden Units | Accuracy |
+|:---:|:---:|
+| 1 | 67.5% |
+| 2 | 67.25% |
+| 3 | 90.75% |
+| 4 | 90.5% |
+| 5 | 91.25% |
+| 20 | 90.0% |
+| 50 | 90.75% |
 
-With only 1-2 hidden units, the network does not have enough capacity to
-model the decision boundary of this dataset, so it underfits and gets
-stuck around 67% accuracy. Once the model has 3 or more hidden units,
-there is enough capacity to fit the data well, and accuracy plateaus
-around 90-91%. Adding many more units beyond that (20, 50) does not
-improve results further, since the extra capacity is not needed for this
-problem and can even risk overfitting on a small dataset rather than
-improving generalization.
+**Q1: What happens when the number of hidden nodes increase?**
+
+Accuracy jumps sharply from 1–2 hidden units (~67%) to 3+ hidden units (~90%), then stays roughly flat between 90–91% all the way from 3 up to 50 hidden units. It does not keep increasing indefinitely as hidden units are added.
+
+**Q2: Can you explain the pattern of the accuracy when the hidden nodes increase?**
+
+With only 1–2 hidden units, the network does not have enough capacity to model the decision boundary of this dataset, so it underfits and gets stuck around 67% accuracy. Once the model has 3 or more hidden units, there is enough capacity to fit the data well, and accuracy plateaus around 90–91%. Adding many more units beyond that (20, 50) does not improve results further, since the extra capacity is not needed for this problem and can even risk overfitting on a small dataset rather than improving generalization.
+
+*(Full written answers also saved separately in `ex2_answers.txt` per submission requirements.)*
 
 ---
 
@@ -90,6 +88,7 @@ improving generalization.
 | `Backprop.ipynb` | Modified notebook for Exercise 1 (10,000 iterations, results visible) |
 | `image.png` | Network diagram used by Backprop.ipynb |
 | `100.png`, `1000.png`, `10000.png` | Output screenshots at each iteration count |
-| `NN_sample.ipynb` | Modified notebook for Exercise 2 |
+| `NN_sample.ipynb` | Modified notebook for Exercise 2 (includes hidden layer size comparison) |
+| `planar_utils.py`, `testCases.py` | Helper files required by NN_sample.ipynb |
 | `ex2_answers.txt` | Written answers to Exercise 2 questions |
 | `MLP_with_MNIST_dataset.ipynb` | Modified notebook for Exercise 3 |

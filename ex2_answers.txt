@@ -1,0 +1,5 @@
+1. What happens when the number of hidden nodes increase?
+Accuracy jumps sharply from 1–2 hidden units (67%) to 3+ hidden units (90%), then stays roughly flat around 90–91% from 3 all the way up to 50 hidden units — it doesn't keep climbing indefinitely.
+
+2. Can you explain the pattern?
+With only 1–2 hidden units, the network doesn't have enough capacity to model the decision boundary of this dataset, so it underfits and gets stuck around 67%. Once you hit 3+ units, there's enough capacity to fit the data well, and accuracy plateaus around 90–91% — adding more units beyond that (20, 50) doesn't help much because the extra capacity isn't needed for this problem, and can even risk overfitting on a small dataset rather than improving generalization.

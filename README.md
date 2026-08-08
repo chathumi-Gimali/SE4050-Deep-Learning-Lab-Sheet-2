@@ -44,7 +44,36 @@ Increasing the number of iterations significantly improved the network's predict
 
 ## Exercise 2: NN_sample.ipynb
 
-*(to be added)*
+Exercise 2: NN_sample.ipynb - Tuning Hidden Layer Size
+
+Results:
+Hidden Units | Accuracy
+1            | 67.5%
+2            | 67.25%
+3            | 90.75%
+4            | 90.5%
+5            | 91.25%
+20           | 90.0%
+50           | 90.75%
+
+Question 1: What happens when the number of hidden nodes increase?
+
+Accuracy jumps sharply from 1-2 hidden units (around 67%) to 3+ hidden units
+(around 90%), then stays roughly flat between 90-91% all the way from 3 up
+to 50 hidden units. It does not keep increasing indefinitely as hidden
+units are added.
+
+Question 2: Can you explain the pattern of the accuracy when the hidden
+nodes increase?
+
+With only 1-2 hidden units, the network does not have enough capacity to
+model the decision boundary of this dataset, so it underfits and gets
+stuck around 67% accuracy. Once the model has 3 or more hidden units,
+there is enough capacity to fit the data well, and accuracy plateaus
+around 90-91%. Adding many more units beyond that (20, 50) does not
+improve results further, since the extra capacity is not needed for this
+problem and can even risk overfitting on a small dataset rather than
+improving generalization.
 
 ---
 
